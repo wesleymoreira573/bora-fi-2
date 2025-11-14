@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto Escola — Tudo sobre o carro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#0b67ff;
+      --muted:#6b7280;
+      --glass: rgba(255,255,255,0.6);
+      --radius:12px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#eef3ff);min-height:100vh;color:#0f172a}
+    .container{max-width:1100px;margin:32px auto;padding:20px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4dd0ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:0 6px 20px rgba(11,103,255,0.12)}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:0;color:var(--muted)}
+
+    nav a{margin-left:12px;text-decoration:none;color:var(--muted);font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:24px;margin-top:28px;align-items:center}
+    .card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    .hero h2{margin:0 0 10px 0;font-size:28px}
+    .cta{margin-top:16px;display:flex;gap:12px}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn.ghost{background:transparent;border:2px solid rgba(11,103,255,0.12);color:var(--accent)}
+
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .feature{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid rgba(11,103,255,0.04)}
+    .feature h3{margin:6px 0 0 0;font-size:15px}
+    .feature p{margin:6px 0 0 0;color:var(--muted);font-size:13px}
+
+    main{margin-top:24px;display:grid;grid-template-columns:2fr 1fr;gap:18px}
+
+    section h3{margin-top:0}
+    .topic{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .topic .card{padding:18px}
+    .media{border-radius:10px;overflow:hidden}
+    img{max-width:100%;display:block}
+
+    .video-wrapper iframe, .video-wrapper video{width:100%;height:260px;border:0}
+
+    aside .card{position:sticky;top:24px}
+    .list{list-style:none;padding:0;margin:0}
+    .list li{padding:10px 0;border-bottom:1px solid rgba(15,23,42,0.04)}
+    .small{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:28px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media (max-width:960px){
+      .hero{grid-template-columns:1fr}
+      main{grid-template-columns:1fr}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .video-wrapper iframe, .video-wrapper video{height:200px}
+    }
+    @media (max-width:560px){
+      .features{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">AE</div>
+        <div>
+          <h1>Auto Escola — Tudo sobre o carro</h1>
+          <p class="lead">Do motor à parte elétrica: aulas, guias, imagens e vídeos pensados pra você</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h2>Aprenda o carro de verdade — passo a passo</h2>
+        <p class="small">Cursos práticos e teóricos sobre motor, transmissão, suspensão, freios e sistema elétrico. Conteúdo indicado para quem quer entender o funcionamento e fazer manutenção básica.</p>
+
+        <div class="features" style="margin-top:14px">
+          <div class="feature">
+            <strong>👨‍🏫 Aulas práticas</strong>
+            <p>Vídeos passo a passo e imagens detalhadas.</p>
+          </div>
+          <div class="feature">
+            <strong>🔌 Sistema elétrico</strong>
+            <p>Diagnóstico de bateria, alternador e fiação.</p>
+          </div>
+          <div class="feature">
+            <strong>🛠 Manutenção básica</strong>
+            <p>Troca de óleo, filtros, fluídos e inspeções.</p>
+          </div>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="#modulos">Ver módulos</a>
+          <a class="btn ghost" href="#galeria">Ver galeria</a>
+          <a class="btn" href="aaa.html">Manutenção - Mini curso</a>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3>Inscreva-se</h3>
+        <p class="small">Receba uma aula grátis por e-mail e atualizações com novas aulas e vídeos.</p>
+        <form onsubmit="event.preventDefault();alert('Obrigado! Inscrição realizada com sucesso.');">
+          <input type="email" placeholder="seu@email.com" required style="width:100%;padding:10px;margin-top:12px;border-radius:8px;border:1px solid #e6eefc">
+          <button class="btn" style="width:100%;margin-top:12px">Quero receber</button>
+        </form>
+        <hr style="margin:12px 0">
+        <p class="small"><strong>Contato rápido</strong><br>WhatsApp: <a href="https://wa.me/5546999328455" target="_blank">(46) 9932-8455</a></p>
+      </aside>
+    </section>
+
+    <main>
+      <div>
+        <section id="sobre" class="card">
+          <h3>Sobre a Auto Escola</h3>
+          <p>Nossa missão é transformar quem tem curiosidade em alguém que entende o próprio carro. Explicamos desde como funciona um motor de combustão interna até diagnóstico do sistema elétrico e soluções simples de manutenção. Conteúdo dividido em módulos: teoria, demonstração em vídeo e guias com imagens e links úteis.</p>
+        </section>
+
+        <section id="modulos" class="card" style="margin-top:12px">
+          <h3>Módulos</h3>
+          <div class="topic">
+            <div class="card">
+              <h4>1. Motor e sistema de combustão</h4>
+              <p class="small">Componentes do motor, ciclo de combustão, lubrificação, diagnóstico de ruídos e vazamentos.</p>
+              <p><a href="https://youtu.be/beyCxjykDiA?si=DPtGaIEB5Uu5KvKg" class="small">>video explicativo </a></p>
+            </div>
+            <div class="card">
+              <h4>2. Transmissão e embreagem</h4>
+              <p class="small">Tipos de caixas, funcionamento da embreagem e problemas comuns.</p>
+              <p><a href="https://youtu.be/jsgWKqo04J0?si=0aFvbZJeftSHdhR-" class="small">>video explicativo sobre a transmissão</a></p>
+              <p><a href="https://youtu.be/_3p0lJM296Y?si=Vq8NWN03vXUkf28d" class="small">>video explicativo sobre a embreagem</a></p>
+            </div>
+            <div class="card">
+              <h4>3. Suspensão e freios</h4>
+              <p class="small">Tipos de suspensão, inspeção de amortecedores, sensores e manutenção de freios.</p>
+              <p><a href="https://youtu.be/g9KSL4KWrbY?si=cbMRQoPppaB09Nm2" class="small">>Video explicativosobre a suspensão</a></p>
+              <p><a href="https://youtu.be/c5rkdxMwIaQ?si=GensA-mHntJyLfei" class="small">>Video explicativo sobre o freio</a> </p>
+            </div>
+            <div class="card">
+              <h4>4. Sistema elétrico</h4>
+              <p class="small">Bateria, alternador, partida, fusíveis, unidades de controle e como interpretar falhas elétricas.</p>
+              <p><a href="https://youtu.be/mnmajXIiKJQ?si=yrTqxq6e6d9u1OCs" class="small">>Video explicativo sobre o sistema elétrico</a> </p>
+            </div>
+            <div class="card">
+              <h4>5. Diagnóstico e manutenção preventiva</h4>
+              <p class="small">Como usar ferramentas básicas, checklists pré-viagem e periodicidade de serviços.</p>
+            </div>
+            <div class="card">
+              <h4>6. Vídeos e demonstrações</h4>
+              <p class="small">Aulas práticas em vídeo — do motor aberto até testes elétricos.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="galeria" class="card" style="margin-top:12px">
+          <h3>Galeria e Vídeos</h3>
+          <p class="small"></p>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
+            <div class="media card">
+              <img src="chevette.png" alt="Chevette">
+              <div style="padding:10px"><strong class="small">Motor — componentes</strong><p class="small">Legenda: bloco, cabeçote, coletores.</p></div>
+            </div>
+            <div class="media card">
+              <img src="maverick.png" alt="Motor V8 Maverick">
+              <div style="padding:10px"><strong class="small">Motor V8 Maverick</strong><p class="small"></p></div>
+            </div>
+          </div>
+
+          <div class="video-wrapper" style="margin-top:28px">
+           <video controls>
+            <source src="ford-maverick-v8.mp4.mp4" type="video/mp4">
+           </video>
+          </div>
+
+          <p class="small" style="margin-top:10px"> </p>
+          <pre style="background:#f3f6ff;padding:10px;border-radius:8px;color:#0b67ff;overflow:auto">
+
+          </pre>
+        </section>
+
+        <section class="card" style="margin-top:12px">
+          <h3>Links úteis</h3>
+          <ul class="list" style="margin-top:10px">
+            <li><a href="https://www.webmotors.com.br/" target="_blank">Comprar seu carro</a></li>
+            <li><a href="https://www.youtube.com/@justdrivepov6263" target="_blank">Canal Just Drive POV</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Guia rápido — antes de pegar a estrada</h3>
+          <ul class="list">
+            <li>✅ Verificar nível de óleo</li>
+            <li>✅ Checar pressão dos pneus</li>
+            <li>✅ Conferir luzes e faróis</li>
+            <li>✅ Testar bateria e cabos</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Planos & Preços</h3>
+          
+          <ul class="list">
+            <li>Plano Básico — Acesso aos guias (R$59/mês)</li>
+            <li>Plano Plus — + vídeos práticos (R$129/mês)</li>
+            <li>Plano Pro — Consultoria e aulas ao vivo (R$249/mês)</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Contato</h3>
+          <p class="small"><br>Email: contato@autoescolaexemplo.com</p>
+          <p class="small">Redes: <a href="https://www.instagram.com/wesle_ymoreira/">Instagram</a> • <a href="https://github.com/wesleymoreira573">Meu perfil do GitHub</a></p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div class="small">© 2025 Auto Escola — Site criado por Wesley Moreira Pereira.</div>
+    </footer>
+    <div><button class="btn ghost" onclick="scrollToTop()">Voltar ao topo</button></div>
+  </div>
+
+  <script>
+    // Pequena interatividade: navegação suave
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const href = a.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    })
+    // Função: rolar suavemente para o topo quando o botão for clicado
+    function scrollToTop(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    }
+  </script>
+</body>
+</html>
